@@ -50,6 +50,10 @@ app.use('/api', contactRoutes);
 // app.use(express.static(path.join(__dirname, '../frontend/build')));
 // app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../frontend/build/index.html')));
 // Handle invalid paths
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'API is working' });
+    console.log('✅ /api/test called');
+});
 app.use(notFoundHandler);
 
 // Error handling middleware
